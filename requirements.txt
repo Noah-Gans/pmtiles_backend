@@ -1,0 +1,16 @@
+google-cloud-storage
+beautifulsoup4==4.12.3
+lxml==5.2.2
+tqdm==4.66.4
+requests==2.32.3
+pandas==2.3.1
+numpy==1.26.4
+shapely==2.0.2
+fiona==1.9.6
+geopandas==0.14.4
+pyproj==3.6.1
+# Removed psycopg2-binary (database dependency)
+# Removed gdal (not needed for PMTiles generation)
+# Note: tippecanoe and pmtiles will be installed in Cloud Functions environment
+
+gdal==3.9.0

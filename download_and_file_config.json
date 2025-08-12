@@ -1,0 +1,192 @@
+{
+    "teton_county_wy": {
+      "ownership": {
+        "parcel_download_type": "kmz",
+        "parcel_url": "https://s3.us-west-2.amazonaws.com/tetoncountywy/gis/download/kmz/ownership.kmz",
+        "needs_merging": false,
+        "standardization_mappings": {
+          "parcel_id": ["pidn"],
+          "owner_name": ["owner"],
+          "physical_address": ["st_address"],
+          "mailing_address": ["mailing_address", "owner_address"],
+          "acreage": ["area_calc"],
+          "property_value": ["acctval"],
+          "land_type_description": ["accttype"],
+          "deed_reference": ["deed", "deed_reference", "deed_ref"],
+          "tax_year": ["tax_year", "year"],
+          "owner_city": ["owner_city", "city"],
+          "owner_state": ["owner_state", "state"],
+          "owner_zip": ["owner_zip", "zip", "zip_code"]
+        },
+        "standardized_links": {
+          "property_details": {
+            "base_url": "https://gis.tetoncountywy.gov/portal/apps/dashboards/ca93f7b7ae3e4d51ad371121a64ee739#accountno=",
+            "field": "accountno"
+          },
+          "clerk_records": {
+            "base_url": "https://gis.tetoncountywy.gov/portal/apps/dashboards/03ef10d8b8634909b6263e9016bcc986#statepin=",
+            "field": "pidn"
+          },
+          "tax_details": {
+            "base_url": "https://gis.tetoncountywy.gov/portal/apps/dashboards/5574848e46464109a14dead33e5ddace#ParcelInfo=",
+            "field": "tax_id"
+          }
+        }
+      },
+      "conservation_easements": {
+        "download_type": "kmz",
+        "data_type": "conservation_easement",
+        "url": "https://s3.us-west-2.amazonaws.com/tetoncountywy/gis/download/kmz/conservation_easements.kmz"
+      },
+      "control_points": {
+        "download_type": "kmz",
+        "data_type": "control_points",
+        "url": "https://s3.us-west-2.amazonaws.com/tetoncountywy/gis/download/kmz/control_points.kmz"
+      },
+      "plss": {
+        "download_type": "kmz",
+        "data_type": "plss",
+        "url": "https://s3.us-west-2.amazonaws.com/tetoncountywy/gis/download/kmz/plss.kmz"
+      },
+      "precincts": {
+        "download_type": "kmz",
+        "data_type": "precincts",
+        "url": "https://s3.us-west-2.amazonaws.com/tetoncountywy/gis/download/kmz/precincts.kmz"
+      },
+      "roads": {
+        "download_type": "kmz",
+        "data_type": "roads",
+        "url": "https://s3.us-west-2.amazonaws.com/tetoncountywy/gis/download/kmz/roads.kmz"
+      },
+      "zoning": {
+        "download_type": "kmz",
+        "data_type": "zoning",
+        "url": "https://s3.us-west-2.amazonaws.com/tetoncountywy/gis/download/kmz/zoning.kmz"
+      }
+    },
+  "teton_county_id": {
+    "ownership": {
+      "data_type": "ownership",
+      "parcel_download_type": "kmz",
+      "parcel_url": "https://www.arcgis.com/sharing/rest/content/items/ec2bf7b8328543938e3219a91d79c7cd/data",
+      "standardization_mappings": {
+        "parcel_id": ["pin"],
+        "owner_name": ["owner"],
+        "physical_address": ["physical_address"],
+        "mailing_address": ["mailing_address", "mailing_city", "mailing_state", "mailing_zip"],
+        "acreage": ["acres"],
+        "property_value": ["total_value"],
+        "land_type_description": ["legal_1"],
+        "deed_reference": ["deed_ref1"],
+        "tax_year": ["taxyear"],
+        "owner_city": ["mailing_city"],
+        "owner_state": ["mailing_state"],
+        "owner_zip": ["mailing_zip"]
+      }
+    }
+  },
+  "lincoln_county_wy": {
+    "ownership": {
+      "data_type": "ownership",
+      "parcel_download_type": "signed_geojson",
+      "parcel_url": "https://services1.arcgis.com/mAJPyaZkZWzjRIy7/arcgis/rest/services/Public_Download_Parcels/FeatureServer/replicafilescache/Public_Download_Parcels_1128884694680228272.geojson",
+      "needs_merging": true,
+      "standardization_mappings": {
+        "parcel_id": ["PIN"],
+        "owner_name": ["OWNERSHIP"],
+        "physical_address": ["Address"],
+        "mailing_address": ["MAIL_ADD"],
+        "acreage": ["GR_ACRE"],
+        "property_value": ["value", "property_value", "assessed_value"],
+        "land_type_description": ["Description"],
+        "deed_reference": ["deed", "deed_reference", "deed_ref"],
+        "tax_year": ["tax_year", "year"],
+        "owner_city": ["owner_city", "city"],
+        "owner_state": ["owner_state", "state"],
+        "owner_zip": ["owner_zip", "zip", "zip_code"]
+      },
+      "standardized_links": {
+        "property_details": {
+          "base_url": "https://propertydetails.lcwy.org/Home/Detail/",
+          "field": "RWACCT"
+        },
+        "tax_details": {
+          "static_url": "https://itax.tylertech.com/LincolnWY/detail.aspx?taxid=",
+          "field": "RWACCT"
+        },
+        "clerk_records": {
+          "static_url": "https://idocmarket.com/Subscription/Subscribe?county=LINWY1"
+        }
+      }
+    }
+  },
+  "sublette_county_wy": {
+    "ownership": {
+      "parcel_download_type": "zip_ownership_shp",
+      "parcel_url": "https://maps.terragis.net/sublette/mapserver/download/ownership_shp.zip",
+      "data_type": "ownership",
+      "standardization_mappings": {
+        "parcel_id": ["pidn"],
+        "owner_name": ["name"],
+        "physical_address": ["st_address"],
+        "mailing_address": ["address"],
+        "acreage": ["acres_calc"],
+        "property_value": ["total_val"],
+        "land_type_description": ["accttype"],
+        "deed_reference": ["bookpage"],
+        "tax_year": ["taxyear"],
+        "owner_city": ["owner_city", "city"],
+        "owner_state": ["owner_state", "state"],
+        "owner_zip": ["owner_zip", "zip", "zip_code"]
+      },
+      "standardized_links": {
+        "property_details": {
+          "base_url": "https://greenwoodmap.com/sublette/mapserver/tabDetail.php?v=2&accountno=",
+          "field": "accountno"
+        },
+        "tax_details": {
+          "base_url": "https://maps.greenwoodmap.com/sublette/treas/query/search.php?Tax_ID=",
+          "field": "tax_id"
+        },
+        "clerk_records": {
+          "static_url": "https://maps.terragis.net/sublette/clerk/query/list.php?pidn=",
+          "field": "pidn"
+        }
+      }
+    }
+  },
+  "fremont_county_wy": {
+    "ownership": {
+      "parcel_download_type": "zip_ownership_shp",
+      "parcel_url": "https://gwmap.s3.amazonaws.com/fremontwy/download/ownership.zip",
+      "data_type": "ownership",
+      "standardization_mappings": {
+        "parcel_id": ["pidn"],
+        "owner_name": ["ownername"],
+        "physical_address": ["st_address"],
+        "mailing_address": ["address"],
+        "acreage": ["grossacres"],
+        "property_value": ["acct_val"],
+        "land_type_description": ["accttype"],
+        "deed_reference": ["receptno"],
+        "tax_year": ["tax_year", "year"],
+        "owner_city": ["owner_city", "city"],
+        "owner_state": ["owner_state", "state"],
+        "owner_zip": ["owner_zip", "zip", "zip_code"]
+      },
+      "standardized_links": {
+        "property_details": {
+          "base_url": "https://maps.greenwoodmap.com/fremontwy/tabDetail.php?v=2&accountno=",
+          "field": "accountno"
+        },
+        "tax_details": {
+          "base_url": "https://itax.tylertech.com/FremontWY/detail.aspx?taxid=",
+          "field": "tax_id"
+        },
+        "clerk_records": {
+          "static_url": "https://fremontcountywy-recorder.tylerhost.net/recorder/eagleweb/docSearch.jsp"
+        }
+      }
+    }
+  }
+}

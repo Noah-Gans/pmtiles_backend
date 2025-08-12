@@ -1,0 +1,24 @@
+# Remove large generated files
+rm ownership_20250809.mbtiles
+rm ownership_20250809.mbtiles-journal
+rm ownership_search_file
+
+# Remove virtual environments
+rm -rf venv/
+rm -rf __pycache__/
+
+# Remove generated data directories
+rm -rf Processed_Geojsons/
+rm -rf geojsons_for_db_upload/
+rm -rf lincoln_county_wy_data_files/
+
+# Add these lines to .gitignore
+
+# Add everything (now much smaller)
+git add .
+
+# Commit
+git commit -m "Clean commit: PMTiles pipeline code only"
+
+# Push
+git push origin main
